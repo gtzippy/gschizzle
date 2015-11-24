@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 21, 2015 4:27:25 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="Project4.service.entities.Sysinfo" table="sysinfo" catalog="mydb">
+        <composite-id name="id" class="Project4.service.entities.SysinfoId">
+            <key-property name="defaultTaWeighting" type="int">
+                <column name="defaultTaWeighting" />
+            </key-property>
+            <key-property name="maxCoursesPerSemester" type="int">
+                <column name="maxCoursesPerSemester" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
