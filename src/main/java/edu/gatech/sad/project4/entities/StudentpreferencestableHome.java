@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 21, 2015 2:37:21 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.List;
 import javax.naming.InitialContext;
@@ -91,7 +91,7 @@ public class StudentpreferencestableHome {
 		}
 	}
 
-	public Studentpreferencestable findById(int id) {
+	public Studentpreferencestable findById(java.lang.Integer id) {
 		log.debug("getting Studentpreferencestable instance with id: " + id);
 		try {
 			Studentpreferencestable instance = (Studentpreferencestable) sessionFactory

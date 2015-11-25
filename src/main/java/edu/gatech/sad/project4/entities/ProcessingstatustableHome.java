@@ -11,13 +11,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Example;
 
 /**
- * Home object for domain model class Studenttable.
- * @see edu.gatech.sad.project4.entities.Studenttable
+ * Home object for domain model class Processingstatustable.
+ * @see edu.gatech.sad.project4.entities.Processingstatustable
  * @author Hibernate Tools
  */
-public class StudenttableHome {
+public class ProcessingstatustableHome {
 
-	private static final Log log = LogFactory.getLog(StudenttableHome.class);
+	private static final Log log = LogFactory
+			.getLog(ProcessingstatustableHome.class);
 
 	private final SessionFactory sessionFactory = getSessionFactory();
 
@@ -32,8 +33,8 @@ public class StudenttableHome {
 		}
 	}
 
-	public void persist(Studenttable transientInstance) {
-		log.debug("persisting Studenttable instance");
+	public void persist(Processingstatustable transientInstance) {
+		log.debug("persisting Processingstatustable instance");
 		try {
 			sessionFactory.getCurrentSession().persist(transientInstance);
 			log.debug("persist successful");
@@ -43,8 +44,8 @@ public class StudenttableHome {
 		}
 	}
 
-	public void attachDirty(Studenttable instance) {
-		log.debug("attaching dirty Studenttable instance");
+	public void attachDirty(Processingstatustable instance) {
+		log.debug("attaching dirty Processingstatustable instance");
 		try {
 			sessionFactory.getCurrentSession().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -54,8 +55,8 @@ public class StudenttableHome {
 		}
 	}
 
-	public void attachClean(Studenttable instance) {
-		log.debug("attaching clean Studenttable instance");
+	public void attachClean(Processingstatustable instance) {
+		log.debug("attaching clean Processingstatustable instance");
 		try {
 			sessionFactory.getCurrentSession().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -65,8 +66,8 @@ public class StudenttableHome {
 		}
 	}
 
-	public void delete(Studenttable persistentInstance) {
-		log.debug("deleting Studenttable instance");
+	public void delete(Processingstatustable persistentInstance) {
+		log.debug("deleting Processingstatustable instance");
 		try {
 			sessionFactory.getCurrentSession().delete(persistentInstance);
 			log.debug("delete successful");
@@ -76,10 +77,10 @@ public class StudenttableHome {
 		}
 	}
 
-	public Studenttable merge(Studenttable detachedInstance) {
-		log.debug("merging Studenttable instance");
+	public Processingstatustable merge(Processingstatustable detachedInstance) {
+		log.debug("merging Processingstatustable instance");
 		try {
-			Studenttable result = (Studenttable) sessionFactory
+			Processingstatustable result = (Processingstatustable) sessionFactory
 					.getCurrentSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
@@ -89,12 +90,13 @@ public class StudenttableHome {
 		}
 	}
 
-	public Studenttable findById(java.lang.Integer id) {
-		log.debug("getting Studenttable instance with id: " + id);
+	public Processingstatustable findById(int id) {
+		log.debug("getting Processingstatustable instance with id: " + id);
 		try {
-			Studenttable instance = (Studenttable) sessionFactory
+			Processingstatustable instance = (Processingstatustable) sessionFactory
 					.getCurrentSession()
-					.get("edu.gatech.sad.project4.entities.Studenttable", id);
+					.get("edu.gatech.sad.project4.entities.Processingstatustable",
+							id);
 			if (instance == null) {
 				log.debug("get successful, no instance found");
 			} else {
@@ -107,13 +109,13 @@ public class StudenttableHome {
 		}
 	}
 
-	public List findByExample(Studenttable instance) {
-		log.debug("finding Studenttable instance by example");
+	public List findByExample(Processingstatustable instance) {
+		log.debug("finding Processingstatustable instance by example");
 		try {
 			List results = sessionFactory
 					.getCurrentSession()
 					.createCriteria(
-							"edu.gatech.sad.project4.entities.Studenttable")
+							"edu.gatech.sad.project4.entities.Processingstatustable")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

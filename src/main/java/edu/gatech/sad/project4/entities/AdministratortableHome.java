@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 21, 2015 2:37:21 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.List;
 import javax.naming.InitialContext;
@@ -94,8 +94,9 @@ public class AdministratortableHome {
 		log.debug("getting Administratortable instance with id: " + id);
 		try {
 			Administratortable instance = (Administratortable) sessionFactory
-					.getCurrentSession().get(
-							"edu.gatech.sad.project4.entities.Administratortable", id);
+					.getCurrentSession()
+					.get("edu.gatech.sad.project4.entities.Administratortable",
+							id);
 			if (instance == null) {
 				log.debug("get successful, no instance found");
 			} else {

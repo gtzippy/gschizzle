@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 21, 2015 2:37:21 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.List;
 import javax.naming.InitialContext;
@@ -11,13 +11,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Example;
 
 /**
- * Home object for domain model class Sysinfo.
- * @see edu.gatech.sad.project4.entities.Sysinfo
+ * Home object for domain model class Studentcourseassignmenttable.
+ * @see edu.gatech.sad.project4.entities.Studentcourseassignmenttable
  * @author Hibernate Tools
  */
-public class SysinfoHome {
+public class StudentcourseassignmenttableHome {
 
-	private static final Log log = LogFactory.getLog(SysinfoHome.class);
+	private static final Log log = LogFactory
+			.getLog(StudentcourseassignmenttableHome.class);
 
 	private final SessionFactory sessionFactory = getSessionFactory();
 
@@ -32,8 +33,8 @@ public class SysinfoHome {
 		}
 	}
 
-	public void persist(Sysinfo transientInstance) {
-		log.debug("persisting Sysinfo instance");
+	public void persist(Studentcourseassignmenttable transientInstance) {
+		log.debug("persisting Studentcourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().persist(transientInstance);
 			log.debug("persist successful");
@@ -43,8 +44,8 @@ public class SysinfoHome {
 		}
 	}
 
-	public void attachDirty(Sysinfo instance) {
-		log.debug("attaching dirty Sysinfo instance");
+	public void attachDirty(Studentcourseassignmenttable instance) {
+		log.debug("attaching dirty Studentcourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -54,8 +55,8 @@ public class SysinfoHome {
 		}
 	}
 
-	public void attachClean(Sysinfo instance) {
-		log.debug("attaching clean Sysinfo instance");
+	public void attachClean(Studentcourseassignmenttable instance) {
+		log.debug("attaching clean Studentcourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -65,8 +66,8 @@ public class SysinfoHome {
 		}
 	}
 
-	public void delete(Sysinfo persistentInstance) {
-		log.debug("deleting Sysinfo instance");
+	public void delete(Studentcourseassignmenttable persistentInstance) {
+		log.debug("deleting Studentcourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().delete(persistentInstance);
 			log.debug("delete successful");
@@ -76,11 +77,12 @@ public class SysinfoHome {
 		}
 	}
 
-	public Sysinfo merge(Sysinfo detachedInstance) {
-		log.debug("merging Sysinfo instance");
+	public Studentcourseassignmenttable merge(
+			Studentcourseassignmenttable detachedInstance) {
+		log.debug("merging Studentcourseassignmenttable instance");
 		try {
-			Sysinfo result = (Sysinfo) sessionFactory.getCurrentSession()
-					.merge(detachedInstance);
+			Studentcourseassignmenttable result = (Studentcourseassignmenttable) sessionFactory
+					.getCurrentSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -89,11 +91,15 @@ public class SysinfoHome {
 		}
 	}
 
-	public Sysinfo findById(edu.gatech.sad.project4.entities.SysinfoId id) {
-		log.debug("getting Sysinfo instance with id: " + id);
+	public Studentcourseassignmenttable findById(
+			edu.gatech.sad.project4.entities.StudentcourseassignmenttableId id) {
+		log.debug("getting Studentcourseassignmenttable instance with id: "
+				+ id);
 		try {
-			Sysinfo instance = (Sysinfo) sessionFactory.getCurrentSession()
-					.get("edu.gatech.sad.project4.entities.Sysinfo", id);
+			Studentcourseassignmenttable instance = (Studentcourseassignmenttable) sessionFactory
+					.getCurrentSession()
+					.get("edu.gatech.sad.project4.entities.Studentcourseassignmenttable",
+							id);
 			if (instance == null) {
 				log.debug("get successful, no instance found");
 			} else {
@@ -106,11 +112,13 @@ public class SysinfoHome {
 		}
 	}
 
-	public List findByExample(Sysinfo instance) {
-		log.debug("finding Sysinfo instance by example");
+	public List findByExample(Studentcourseassignmenttable instance) {
+		log.debug("finding Studentcourseassignmenttable instance by example");
 		try {
-			List results = sessionFactory.getCurrentSession()
-					.createCriteria("edu.gatech.sad.project4.entities.Sysinfo")
+			List results = sessionFactory
+					.getCurrentSession()
+					.createCriteria(
+							"edu.gatech.sad.project4.entities.Studentcourseassignmenttable")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

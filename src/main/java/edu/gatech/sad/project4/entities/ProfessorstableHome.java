@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 21, 2015 2:37:21 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.List;
 import javax.naming.InitialContext;
@@ -94,7 +94,8 @@ public class ProfessorstableHome {
 		try {
 			Professorstable instance = (Professorstable) sessionFactory
 					.getCurrentSession().get(
-							"edu.gatech.sad.project4.entities.Professorstable", id);
+							"edu.gatech.sad.project4.entities.Professorstable",
+							id);
 			if (instance == null) {
 				log.debug("get successful, no instance found");
 			} else {
@@ -112,7 +113,8 @@ public class ProfessorstableHome {
 		try {
 			List results = sessionFactory
 					.getCurrentSession()
-					.createCriteria("edu.gatech.sad.project4.entities.Professorstable")
+					.createCriteria(
+							"edu.gatech.sad.project4.entities.Professorstable")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 21, 2015 2:37:21 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.List;
 import javax.naming.InitialContext;
@@ -110,8 +110,10 @@ public class CoursetableHome {
 	public List findByExample(Coursetable instance) {
 		log.debug("finding Coursetable instance by example");
 		try {
-			List results = sessionFactory.getCurrentSession()
-					.createCriteria("edu.gatech.sad.project4.entities.Coursetable")
+			List results = sessionFactory
+					.getCurrentSession()
+					.createCriteria(
+							"edu.gatech.sad.project4.entities.Coursetable")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

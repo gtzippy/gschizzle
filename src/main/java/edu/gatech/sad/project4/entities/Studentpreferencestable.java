@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 23, 2015 11:41:06 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 
@@ -9,7 +9,7 @@ import java.util.Date;
  */
 public class Studentpreferencestable implements java.io.Serializable {
 
-	private int preferenceId;
+	private Integer preferenceId;
 	private Date date;
 	private int studentId;
 	private String courses;
@@ -19,18 +19,16 @@ public class Studentpreferencestable implements java.io.Serializable {
 	public Studentpreferencestable() {
 	}
 
-	public Studentpreferencestable(int preferenceId, Date date, int studentId,
-			String courses, int numCoursesDesired) {
-		this.preferenceId = preferenceId;
+	public Studentpreferencestable(Date date, int studentId, String courses,
+			int numCoursesDesired) {
 		this.date = date;
 		this.studentId = studentId;
 		this.courses = courses;
 		this.numCoursesDesired = numCoursesDesired;
 	}
 
-	public Studentpreferencestable(int preferenceId, Date date, int studentId,
-			String courses, int numCoursesDesired, Integer processingStatusId) {
-		this.preferenceId = preferenceId;
+	public Studentpreferencestable(Date date, int studentId, String courses,
+			int numCoursesDesired, Integer processingStatusId) {
 		this.date = date;
 		this.studentId = studentId;
 		this.courses = courses;
@@ -38,11 +36,11 @@ public class Studentpreferencestable implements java.io.Serializable {
 		this.processingStatusId = processingStatusId;
 	}
 
-	public int getPreferenceId() {
+	public Integer getPreferenceId() {
 		return this.preferenceId;
 	}
 
-	public void setPreferenceId(int preferenceId) {
+	public void setPreferenceId(Integer preferenceId) {
 		this.preferenceId = preferenceId;
 	}
 

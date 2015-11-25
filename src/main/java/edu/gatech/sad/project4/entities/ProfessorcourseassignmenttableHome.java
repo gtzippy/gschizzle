@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 21, 2015 2:37:21 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.List;
 import javax.naming.InitialContext;
@@ -11,13 +11,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Example;
 
 /**
- * Home object for domain model class Courseava.
- * @see edu.gatech.sad.project4.entities.Courseava
+ * Home object for domain model class Professorcourseassignmenttable.
+ * @see edu.gatech.sad.project4.entities.Professorcourseassignmenttable
  * @author Hibernate Tools
  */
-public class CourseavaHome {
+public class ProfessorcourseassignmenttableHome {
 
-	private static final Log log = LogFactory.getLog(CourseavaHome.class);
+	private static final Log log = LogFactory
+			.getLog(ProfessorcourseassignmenttableHome.class);
 
 	private final SessionFactory sessionFactory = getSessionFactory();
 
@@ -32,8 +33,8 @@ public class CourseavaHome {
 		}
 	}
 
-	public void persist(Courseava transientInstance) {
-		log.debug("persisting Courseava instance");
+	public void persist(Professorcourseassignmenttable transientInstance) {
+		log.debug("persisting Professorcourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().persist(transientInstance);
 			log.debug("persist successful");
@@ -43,8 +44,8 @@ public class CourseavaHome {
 		}
 	}
 
-	public void attachDirty(Courseava instance) {
-		log.debug("attaching dirty Courseava instance");
+	public void attachDirty(Professorcourseassignmenttable instance) {
+		log.debug("attaching dirty Professorcourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -54,8 +55,8 @@ public class CourseavaHome {
 		}
 	}
 
-	public void attachClean(Courseava instance) {
-		log.debug("attaching clean Courseava instance");
+	public void attachClean(Professorcourseassignmenttable instance) {
+		log.debug("attaching clean Professorcourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -65,8 +66,8 @@ public class CourseavaHome {
 		}
 	}
 
-	public void delete(Courseava persistentInstance) {
-		log.debug("deleting Courseava instance");
+	public void delete(Professorcourseassignmenttable persistentInstance) {
+		log.debug("deleting Professorcourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().delete(persistentInstance);
 			log.debug("delete successful");
@@ -76,11 +77,12 @@ public class CourseavaHome {
 		}
 	}
 
-	public Courseava merge(Courseava detachedInstance) {
-		log.debug("merging Courseava instance");
+	public Professorcourseassignmenttable merge(
+			Professorcourseassignmenttable detachedInstance) {
+		log.debug("merging Professorcourseassignmenttable instance");
 		try {
-			Courseava result = (Courseava) sessionFactory.getCurrentSession()
-					.merge(detachedInstance);
+			Professorcourseassignmenttable result = (Professorcourseassignmenttable) sessionFactory
+					.getCurrentSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
 		} catch (RuntimeException re) {
@@ -89,11 +91,15 @@ public class CourseavaHome {
 		}
 	}
 
-	public Courseava findById(java.lang.String id) {
-		log.debug("getting Courseava instance with id: " + id);
+	public Professorcourseassignmenttable findById(
+			edu.gatech.sad.project4.entities.ProfessorcourseassignmenttableId id) {
+		log.debug("getting Professorcourseassignmenttable instance with id: "
+				+ id);
 		try {
-			Courseava instance = (Courseava) sessionFactory.getCurrentSession()
-					.get("edu.gatech.sad.project4.entities.Courseava", id);
+			Professorcourseassignmenttable instance = (Professorcourseassignmenttable) sessionFactory
+					.getCurrentSession()
+					.get("edu.gatech.sad.project4.entities.Professorcourseassignmenttable",
+							id);
 			if (instance == null) {
 				log.debug("get successful, no instance found");
 			} else {
@@ -106,11 +112,13 @@ public class CourseavaHome {
 		}
 	}
 
-	public List findByExample(Courseava instance) {
-		log.debug("finding Courseava instance by example");
+	public List findByExample(Professorcourseassignmenttable instance) {
+		log.debug("finding Professorcourseassignmenttable instance by example");
 		try {
-			List results = sessionFactory.getCurrentSession()
-					.createCriteria("edu.gatech.sad.project4.entities.Courseava")
+			List results = sessionFactory
+					.getCurrentSession()
+					.createCriteria(
+							"edu.gatech.sad.project4.entities.Professorcourseassignmenttable")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 21, 2015 2:37:21 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.List;
 import javax.naming.InitialContext;
@@ -11,13 +11,14 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Example;
 
 /**
- * Home object for domain model class Resultstable.
- * @see edu.gatech.sad.project4.entities.Resultstable
+ * Home object for domain model class Tacourseassignmenttable.
+ * @see edu.gatech.sad.project4.entities.Tacourseassignmenttable
  * @author Hibernate Tools
  */
-public class ResultstableHome {
+public class TacourseassignmenttableHome {
 
-	private static final Log log = LogFactory.getLog(ResultstableHome.class);
+	private static final Log log = LogFactory
+			.getLog(TacourseassignmenttableHome.class);
 
 	private final SessionFactory sessionFactory = getSessionFactory();
 
@@ -32,8 +33,8 @@ public class ResultstableHome {
 		}
 	}
 
-	public void persist(Resultstable transientInstance) {
-		log.debug("persisting Resultstable instance");
+	public void persist(Tacourseassignmenttable transientInstance) {
+		log.debug("persisting Tacourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().persist(transientInstance);
 			log.debug("persist successful");
@@ -43,8 +44,8 @@ public class ResultstableHome {
 		}
 	}
 
-	public void attachDirty(Resultstable instance) {
-		log.debug("attaching dirty Resultstable instance");
+	public void attachDirty(Tacourseassignmenttable instance) {
+		log.debug("attaching dirty Tacourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().saveOrUpdate(instance);
 			log.debug("attach successful");
@@ -54,8 +55,8 @@ public class ResultstableHome {
 		}
 	}
 
-	public void attachClean(Resultstable instance) {
-		log.debug("attaching clean Resultstable instance");
+	public void attachClean(Tacourseassignmenttable instance) {
+		log.debug("attaching clean Tacourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().lock(instance, LockMode.NONE);
 			log.debug("attach successful");
@@ -65,8 +66,8 @@ public class ResultstableHome {
 		}
 	}
 
-	public void delete(Resultstable persistentInstance) {
-		log.debug("deleting Resultstable instance");
+	public void delete(Tacourseassignmenttable persistentInstance) {
+		log.debug("deleting Tacourseassignmenttable instance");
 		try {
 			sessionFactory.getCurrentSession().delete(persistentInstance);
 			log.debug("delete successful");
@@ -76,10 +77,11 @@ public class ResultstableHome {
 		}
 	}
 
-	public Resultstable merge(Resultstable detachedInstance) {
-		log.debug("merging Resultstable instance");
+	public Tacourseassignmenttable merge(
+			Tacourseassignmenttable detachedInstance) {
+		log.debug("merging Tacourseassignmenttable instance");
 		try {
-			Resultstable result = (Resultstable) sessionFactory
+			Tacourseassignmenttable result = (Tacourseassignmenttable) sessionFactory
 					.getCurrentSession().merge(detachedInstance);
 			log.debug("merge successful");
 			return result;
@@ -89,12 +91,14 @@ public class ResultstableHome {
 		}
 	}
 
-	public Resultstable findById(int id) {
-		log.debug("getting Resultstable instance with id: " + id);
+	public Tacourseassignmenttable findById(
+			edu.gatech.sad.project4.entities.TacourseassignmenttableId id) {
+		log.debug("getting Tacourseassignmenttable instance with id: " + id);
 		try {
-			Resultstable instance = (Resultstable) sessionFactory
-					.getCurrentSession().get(
-							"edu.gatech.sad.project4.entities.Resultstable", id);
+			Tacourseassignmenttable instance = (Tacourseassignmenttable) sessionFactory
+					.getCurrentSession()
+					.get("edu.gatech.sad.project4.entities.Tacourseassignmenttable",
+							id);
 			if (instance == null) {
 				log.debug("get successful, no instance found");
 			} else {
@@ -107,11 +111,13 @@ public class ResultstableHome {
 		}
 	}
 
-	public List findByExample(Resultstable instance) {
-		log.debug("finding Resultstable instance by example");
+	public List findByExample(Tacourseassignmenttable instance) {
+		log.debug("finding Tacourseassignmenttable instance by example");
 		try {
-			List results = sessionFactory.getCurrentSession()
-					.createCriteria("edu.gatech.sad.project4.entities.Resultstable")
+			List results = sessionFactory
+					.getCurrentSession()
+					.createCriteria(
+							"edu.gatech.sad.project4.entities.Tacourseassignmenttable")
 					.add(Example.create(instance)).list();
 			log.debug("find by example successful, result size: "
 					+ results.size());

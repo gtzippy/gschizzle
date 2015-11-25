@@ -1,6 +1,6 @@
 package edu.gatech.sad.project4.entities;
 
-// Generated Nov 23, 2015 11:41:06 PM by Hibernate Tools 3.4.0.CR1
+// Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1
 
 import java.util.Date;
 
@@ -61,6 +61,13 @@ public class Processingstatustable implements java.io.Serializable {
 
 	public void setCompleted(boolean completed) {
 		this.completed = completed;
+	}
+
+	@Override
+	public String toString() {
+		return "Processingstatustable [id=" + id + ", registeredTime="
+				+ registeredTime + ", executionStartTime=" + executionStartTime
+				+ ", completed=" + completed + "]";
 	}
 
 }

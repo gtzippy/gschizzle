@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Nov 23, 2015 11:41:06 PM by Hibernate Tools 3.4.0.CR1 -->
+<!-- Generated Nov 25, 2015 3:17:11 AM by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
     <class name="edu.gatech.sad.project4.entities.Professorstable" table="professorstable" catalog="mydb">
         <id name="professorId" type="int">
@@ -9,10 +9,10 @@
             <generator class="assigned" />
         </id>
         <property name="name" type="string">
-            <column name="name" length="45" not-null="true" />
+            <column name="name" not-null="true" />
         </property>
         <property name="courses" type="string">
-            <column name="courses" not-null="true" />
+            <column name="courses" />
         </property>
     </class>
 </hibernate-mapping>
